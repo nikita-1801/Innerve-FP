@@ -1,0 +1,270 @@
+a,
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+button,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+input,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+select,
+small,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    outline: 0;
+    -webkit-appearance: none;
+}
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+ul {
+    list-style: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+    transition: background-color 5000s ease-in-out 0s;
+}
+:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+figure {
+    margin: 0;
+}
+figure,
+img,
+svg {
+    -webkit-user-drag: none;
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+video {
+    overflow: hidden;
+    border: 0;
+    display: block;
+}
+article,
+div,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+li,
+p,
+section,
+span {
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: inherit;
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background: #004a62;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    display: none;
+}
+.hide {
+    display: none !important;
+}
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#preloader,
+#preloader .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#preloader .container {
+    width: 35vw;
+    height: 35vw;
+}
+@media (max-width: 1024px) {
+    #preloader .container {
+        transform: scale(2);
+    }
+}
+#preloader .container svg {
+    fill: #e8b297;
+    transform: scale(0.99999);
+}
+#preloader .container .logo {
+    position: relative;
+    width: 6.25vw;
+    left: 20%;
+    opacity: 0;
+}
+#preloader .container .name-container {
+    overflow: hidden;
+    margin-left: 1vw;
+    margin-top: 0.55vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+#preloader .container .name-container .name {
+    position: relative;
+    width: 12.66vw;
+    margin-left: 0.7361vw;
+    left: -100%;
+}
+#preloader .container .progress {
+    position: absolute;
+    width: 32.5vw;
+    height: 32.5vw;
+    transform: rotate(-90deg);
+}
+#preloader .container .progress circle {
+    fill: none;
+    stroke: #e8b297;
+}
+#preloader .container .progress .progress__meter {
+    opacity: 0.15;
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
+}
+#preloader .container .progress .progress__value {
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
+    transition-duration: 0.8s;
+    transition-property: stroke-dashoffset;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+#preloader.show .container .logo {
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.25s;
+    left: 0;
+    opacity: 1;
+}
+#preloader.show .container .name-container .name {
+    transition: left 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.25s;
+    left: 0;
+}
+#preloader.show .container .progress .progress__meter {
+    transition-duration: 0.8s;
+    transition-property: stroke-dasharray, stroke-dashoffset;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 0;
+}
+#cursor {
+    position: fixed;
+    z-index: 2;
+    pointer-events: none;
+}
+@media (max-width: 1024px) {
+    #cursor {
+        display: none;
+    }
+}
+#cursor div {
+    width: 0.8333rem;
+    height: 0.8333rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+}
